@@ -185,6 +185,90 @@ do
 done	
 
 
+echo "Deleting alternatives ln..."
+
+ALTERNATIVES=(
+	avro-tools 
+	beeline 
+	bigtop-detect-javahome 
+	catalogd 
+	cli_mt 
+	cli_st 
+	flume-ng 
+	hadoop 
+	hadoop-0.20 
+	hadoop-fuse-dfs 
+	hbase 
+	hbase-indexer 
+	hcat 
+	hdfs 
+	hive 
+	hiveserver2 
+	impalad 
+	impala-shell 
+	kite-dataset 
+	oozie 
+	oozie-conf 
+	parquet-tools 
+	pig 
+	pyspark 
+	sentry 
+	solrctl 
+	spark-executor 
+	spark-shell 
+	spark-submit 
+	sqoop 
+	sqoop2 
+	sqoop-codegen 
+	sqoop-create-hive-table 
+	sqoop-eval 
+	sqoop-export 
+	sqoop-help 
+	sqoop-import 
+	sqoop-import-all-tables 
+	sqoop-job 
+	sqoop-list-databases 
+	sqoop-list-tables 
+	sqoop-merge 
+	sqoop-metastore 
+	sqoop-version 
+	statestored 
+	whirr 
+	yarn 
+	zookeeper-client 
+	zookeeper-server 
+	zookeeper-server-cleanup 
+	zookeeper-server-initialize 
+	flume-ng-conf
+	hbase-solr-conf
+	hadoop-kms-conf
+	hbase-solr-conf
+	hive-hcatalog-conf
+	hive-webhcat-conf
+	hue-conf
+	impala-conf
+	llama
+	llamaadmin
+	llama-conf
+	load_gen
+	mahout
+	mahout-conf
+	mapred
+	oozie-conf
+	pig-conf
+	sentry-conf
+	solr-conf
+	sqoop2-conf
+	sqoop-conf
+	zookeeper-conf
+	hadoop-httpfs-conf 
+)
+
+
+for ALTERNATIVE in "${ALTERNATIVES[@]}"
+do
+	rm -rf /etc/alternatives/$ALTERNATIVE
+done	
 
 
 echo "DONE"
